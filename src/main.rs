@@ -35,11 +35,11 @@ fn main() {
             let mut new_bytes = (0..10).map(|_i| rng.gen_range(0, 255)).collect::<Vec<u8>>();
 
             output.append(&mut new_bytes);
-		}
+	}
 		
-		let mut out = std::io::stdout();
-		out.write_all(output.as_slice())
-			.expect("Failed to write to stdout");
-		out.flush().expect("Failed to flush stdout");
+	let mut out = std::io::stdout();
+	out.write_all(output.as_slice())
+		.expect("Failed to write to stdout");
+	out.flush().expect("Failed to flush stdout");
     });
 }
